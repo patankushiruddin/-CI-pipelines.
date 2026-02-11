@@ -1,0 +1,48 @@
+{
+  "project_name": "MyProject",
+  "build_commands": [
+    {
+      "name": "clean",
+      "command": "echo 'Cleaning build artifacts...'",
+      "timeout": 30
+    },
+    {
+      "name": "install_deps",
+      "command": "pip install -r requirements.txt",
+      "timeout": 300
+    },
+    {
+      "name": "build",
+      "command": "for /f %f in ('dir /b *.py') do python -m py_compile %f",
+      "timeout": 120
+    }
+  ],
+  "test_commands": [
+    {
+      "name": "unit_tests",
+      "command": "python -m unittest discover tests/ -v",
+      "timeout": 300
+    },
+    {
+      "name": "linting",
+      "command": "flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'",
+      "timeout": 60
+    },
+    {
+      "name": "type_check",
+      "command": "mypy *.py || echo 'mypy not available, skipping type checking'",
+      "timeout": 120
+    }
+  ],
+  "deployment_commands": [
+    {
+      "name": "package",
+      "command": "echo 'Packaging application...'",
+      "timeout": 60
+    }
+  ],
+  "notifications": {
+    "email": false,
+    "slack": false
+  }
+}

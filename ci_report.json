@@ -1,0 +1,75 @@
+{
+  "project": "MyProject",
+  "timestamp": "2026-02-09 18:18:28",
+  "summary": {
+    "total_stages": 7,
+    "successful_stages": 7,
+    "failed_stages": 0,
+    "total_duration": 6.3586297035217285,
+    "status": "SUCCESS"
+  },
+  "stages": {
+    "build": [
+      {
+        "step": 1,
+        "status": "success",
+        "duration": 0.060088157653808594,
+        "exit_code": 0,
+        "output": "'Cleaning build artifacts...'\n",
+        "error": ""
+      },
+      {
+        "step": 2,
+        "status": "success",
+        "duration": 3.292072296142578,
+        "exit_code": 0,
+        "output": "Requirement already satisfied: pytest>=7.0.0 in c:\\users\\dell\\appdata\\local\\programs\\python\\python311\\lib\\site-packages (from -r requirements.txt (line 1)) (9.0.2)\nRequirement already satisfied: flake8>=5.0.0 in c:\\users\\dell\\appdata\\local\\programs\\python\\python311\\lib\\site-packages (from -r requirements.txt (line 2)) (7.3.0)\nRequirement already satisfied: mypy>=1.0.0 in c:\\users\\dell\\appdata\\local\\programs\\python\\python311\\lib\\site-packages (from -r requirements.txt (line 3)) (1.19.1)\nRequireme...",
+        "error": "\n[notice] A new release of pip is available: 25.3 -> 26.0.1\n[notice] To update, run: python.exe -m pip install --upgrade pip\n"
+      },
+      {
+        "step": 3,
+        "status": "success",
+        "duration": 0.40235018730163574,
+        "exit_code": 0,
+        "output": "\nD:\\third year\\third term\\Devops Engineering\\programs\\module 3>python -m py_compile ci_automation.py \n\nD:\\third year\\third term\\Devops Engineering\\programs\\module 3>python -m py_compile main.py \n",
+        "error": ""
+      }
+    ],
+    "test": [
+      {
+        "step": 1,
+        "status": "success",
+        "duration": 0.22255706787109375,
+        "exit_code": 0,
+        "output": "",
+        "error": "test_another (test_sample.TestSample.test_another) ... ok\ntest_sample (test_sample.TestSample.test_sample) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      {
+        "step": 2,
+        "status": "success",
+        "duration": 1.013594150543213,
+        "exit_code": 0,
+        "output": "*.py:0:1: E902 OSError: [Errno 22] Invalid argument: '*.py'\n'flake8 not available, skipping linting'\n",
+        "error": ""
+      },
+      {
+        "step": 3,
+        "status": "success",
+        "duration": 1.3235039710998535,
+        "exit_code": 0,
+        "output": "'mypy not available, skipping type checking'\n",
+        "error": "mypy: can't read file '*.py': Invalid argument\n"
+      }
+    ],
+    "deploy": [
+      {
+        "step": 1,
+        "status": "success",
+        "duration": 0.0444638729095459,
+        "exit_code": 0,
+        "output": "'Packaging application...'\n",
+        "error": ""
+      }
+    ]
+  }
+}

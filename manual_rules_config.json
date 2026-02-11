@@ -1,0 +1,9 @@
+{
+  "project_name": "MyCustomProject",
+  "working_directory": ".",
+  "build_commands": [],
+  "test_commands": [],
+  "deployment_commands": [],
+  "environment_variables": {},
+  "custom_script": ""
+}

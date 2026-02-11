@@ -1,0 +1,894 @@
+2026-02-09 14:39:48,036 - INFO - Starting CI pipeline for MyProject
+2026-02-09 14:39:48,036 - INFO - Starting stage: Build
+2026-02-09 14:39:48,037 - INFO - Executing Build.clean
+2026-02-09 14:39:48,038 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:39:48,118 - INFO - Command completed successfully in 0.08s
+2026-02-09 14:39:48,118 - INFO - Completed Build.clean
+2026-02-09 14:39:48,119 - INFO - Executing Build.install_deps
+2026-02-09 14:39:48,119 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:39:55,948 - ERROR - Command failed with exit code 1
+2026-02-09 14:39:55,950 - ERROR - Stage Build failed at install_deps
+2026-02-09 14:39:55,951 - ERROR - Build stage failed. Skipping tests and deployment.
+2026-02-09 14:39:55,956 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:39:55,960 - INFO - Pipeline completed in 7.92s with status: FAILED
+2026-02-09 14:40:32,653 - INFO - Created sample project files
+2026-02-09 14:40:37,632 - INFO - Starting CI pipeline for MyProject
+2026-02-09 14:40:37,633 - INFO - Starting stage: Build
+2026-02-09 14:40:37,633 - INFO - Executing Build.clean
+2026-02-09 14:40:37,633 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:40:37,725 - INFO - Command completed successfully in 0.09s
+2026-02-09 14:40:37,726 - INFO - Completed Build.clean
+2026-02-09 14:40:37,726 - INFO - Executing Build.install_deps
+2026-02-09 14:40:37,727 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:40:46,541 - INFO - Command completed successfully in 8.81s
+2026-02-09 14:40:46,542 - INFO - Completed Build.install_deps
+2026-02-09 14:40:46,542 - INFO - Executing Build.build
+2026-02-09 14:40:46,543 - INFO - Running command: python -m py_compile *.py
+2026-02-09 14:40:46,838 - ERROR - Command failed with exit code 1
+2026-02-09 14:40:46,840 - ERROR - Stage Build failed at build
+2026-02-09 14:40:46,840 - ERROR - Build stage failed. Skipping tests and deployment.
+2026-02-09 14:40:46,842 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:40:46,843 - INFO - Pipeline completed in 9.21s with status: FAILED
+2026-02-09 14:41:03,900 - INFO - Starting CI pipeline for MyProject
+2026-02-09 14:41:03,920 - INFO - Starting stage: Build
+2026-02-09 14:41:03,932 - INFO - Executing Build.clean
+2026-02-09 14:41:03,994 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:41:04,223 - INFO - Command completed successfully in 0.23s
+2026-02-09 14:41:04,232 - INFO - Completed Build.clean
+2026-02-09 14:41:04,249 - INFO - Executing Build.install_deps
+2026-02-09 14:41:04,260 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:41:07,422 - INFO - Command completed successfully in 3.16s
+2026-02-09 14:41:07,422 - INFO - Completed Build.install_deps
+2026-02-09 14:41:07,423 - INFO - Executing Build.build
+2026-02-09 14:41:07,423 - INFO - Running command: python -m py_compile *.py
+2026-02-09 14:41:07,584 - ERROR - Command failed with exit code 1
+2026-02-09 14:41:07,584 - ERROR - Stage Build failed at build
+2026-02-09 14:41:07,584 - ERROR - Build stage failed. Skipping tests and deployment.
+2026-02-09 14:41:07,587 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:41:07,587 - INFO - Pipeline completed in 3.67s with status: FAILED
+2026-02-09 14:42:33,688 - INFO - Starting CI pipeline for MyProject
+2026-02-09 14:42:33,692 - INFO - Starting stage: Build
+2026-02-09 14:42:33,694 - INFO - Executing Build.clean
+2026-02-09 14:42:33,695 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:42:33,994 - INFO - Command completed successfully in 0.30s
+2026-02-09 14:42:33,996 - INFO - Completed Build.clean
+2026-02-09 14:42:33,997 - INFO - Executing Build.install_deps
+2026-02-09 14:42:33,997 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:42:42,181 - INFO - Command completed successfully in 8.18s
+2026-02-09 14:42:42,187 - INFO - Completed Build.install_deps
+2026-02-09 14:42:42,191 - INFO - Executing Build.build
+2026-02-09 14:42:42,193 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 14:42:43,612 - INFO - Command completed successfully in 1.42s
+2026-02-09 14:42:43,613 - INFO - Completed Build.build
+2026-02-09 14:42:43,613 - INFO - Starting stage: Test
+2026-02-09 14:42:43,613 - INFO - Executing Test.unit_tests
+2026-02-09 14:42:43,614 - INFO - Running command: python -m pytest tests/ -v
+2026-02-09 14:42:52,427 - ERROR - Command failed with exit code 1
+2026-02-09 14:42:52,428 - ERROR - Stage Test failed at unit_tests
+2026-02-09 14:42:52,429 - ERROR - Test stage failed. Skipping deployment.
+2026-02-09 14:42:52,438 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:42:52,440 - INFO - Pipeline completed in 18.75s with status: FAILED
+2026-02-09 14:44:41,712 - INFO - Starting CI pipeline for MyProject
+2026-02-09 14:44:41,720 - INFO - Starting stage: Build
+2026-02-09 14:44:41,720 - INFO - Executing Build.clean
+2026-02-09 14:44:41,721 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:44:42,638 - INFO - Command completed successfully in 0.92s
+2026-02-09 14:44:42,638 - INFO - Completed Build.clean
+2026-02-09 14:44:42,639 - INFO - Executing Build.install_deps
+2026-02-09 14:44:42,639 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:44:47,563 - INFO - Command completed successfully in 4.92s
+2026-02-09 14:44:47,563 - INFO - Completed Build.install_deps
+2026-02-09 14:44:47,563 - INFO - Executing Build.build
+2026-02-09 14:44:47,564 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 14:44:47,963 - INFO - Command completed successfully in 0.40s
+2026-02-09 14:44:47,963 - INFO - Completed Build.build
+2026-02-09 14:44:47,964 - INFO - Starting stage: Test
+2026-02-09 14:44:47,964 - INFO - Executing Test.unit_tests
+2026-02-09 14:44:47,964 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 14:44:48,236 - INFO - Command completed successfully in 0.27s
+2026-02-09 14:44:48,237 - INFO - Completed Test.unit_tests
+2026-02-09 14:44:48,238 - INFO - Executing Test.linting
+2026-02-09 14:44:48,238 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 14:44:50,725 - INFO - Command completed successfully in 2.49s
+2026-02-09 14:44:50,725 - INFO - Completed Test.linting
+2026-02-09 14:44:50,725 - INFO - Executing Test.type_check
+2026-02-09 14:44:50,726 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 14:45:00,964 - INFO - Command completed successfully in 10.24s
+2026-02-09 14:45:00,965 - INFO - Completed Test.type_check
+2026-02-09 14:45:00,966 - INFO - Starting stage: Deploy
+2026-02-09 14:45:00,968 - INFO - Executing Deploy.package
+2026-02-09 14:45:00,969 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 14:45:01,060 - INFO - Command completed successfully in 0.09s
+2026-02-09 14:45:01,060 - INFO - Completed Deploy.package
+2026-02-09 14:45:01,063 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:45:01,064 - INFO - Pipeline completed in 19.34s with status: SUCCESS
+2026-02-09 14:45:25,238 - INFO - Starting CI pipeline for MyProject
+2026-02-09 14:45:25,239 - INFO - Starting stage: Build
+2026-02-09 14:45:25,239 - INFO - Executing Build.clean
+2026-02-09 14:45:25,240 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:45:25,298 - INFO - Command completed successfully in 0.06s
+2026-02-09 14:45:25,300 - INFO - Completed Build.clean
+2026-02-09 14:45:25,300 - INFO - Executing Build.install_deps
+2026-02-09 14:45:25,300 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:45:29,575 - INFO - Command completed successfully in 4.27s
+2026-02-09 14:45:29,576 - INFO - Completed Build.install_deps
+2026-02-09 14:45:29,576 - INFO - Executing Build.build
+2026-02-09 14:45:29,576 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 14:45:29,884 - INFO - Command completed successfully in 0.31s
+2026-02-09 14:45:29,885 - INFO - Completed Build.build
+2026-02-09 14:45:29,886 - INFO - Starting stage: Test
+2026-02-09 14:45:29,886 - INFO - Executing Test.unit_tests
+2026-02-09 14:45:29,886 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 14:45:30,073 - INFO - Command completed successfully in 0.19s
+2026-02-09 14:45:30,074 - INFO - Completed Test.unit_tests
+2026-02-09 14:45:30,074 - INFO - Executing Test.linting
+2026-02-09 14:45:30,074 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 14:45:30,902 - INFO - Command completed successfully in 0.83s
+2026-02-09 14:45:30,903 - INFO - Completed Test.linting
+2026-02-09 14:45:30,903 - INFO - Executing Test.type_check
+2026-02-09 14:45:30,904 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 14:45:31,775 - INFO - Command completed successfully in 0.87s
+2026-02-09 14:45:31,776 - INFO - Completed Test.type_check
+2026-02-09 14:45:31,776 - INFO - Starting stage: Deploy
+2026-02-09 14:45:31,776 - INFO - Executing Deploy.package
+2026-02-09 14:45:31,776 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 14:45:31,873 - INFO - Command completed successfully in 0.10s
+2026-02-09 14:45:31,874 - INFO - Completed Deploy.package
+2026-02-09 14:45:31,876 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:45:31,876 - INFO - Pipeline completed in 6.64s with status: SUCCESS
+2026-02-09 14:58:19,982 - INFO - Starting stage: Build
+2026-02-09 14:58:20,001 - INFO - Executing Build.clean
+2026-02-09 14:58:20,003 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:58:20,133 - INFO - Command completed successfully in 0.13s
+2026-02-09 14:58:20,136 - INFO - Completed Build.clean
+2026-02-09 14:58:20,136 - INFO - Executing Build.install_deps
+2026-02-09 14:58:20,137 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:58:22,941 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:58:25,510 - INFO - Command completed successfully in 5.37s
+2026-02-09 14:58:25,511 - INFO - Completed Build.install_deps
+2026-02-09 14:58:25,512 - INFO - Executing Build.build
+2026-02-09 14:58:25,512 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 14:58:26,118 - INFO - Command completed successfully in 0.61s
+2026-02-09 14:58:26,121 - INFO - Completed Build.build
+2026-02-09 14:58:26,136 - INFO - Starting stage: Test
+2026-02-09 14:58:26,137 - INFO - Executing Test.unit_tests
+2026-02-09 14:58:26,138 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 14:58:26,631 - INFO - Command completed successfully in 0.49s
+2026-02-09 14:58:26,633 - INFO - Completed Test.unit_tests
+2026-02-09 14:58:26,640 - INFO - Executing Test.linting
+2026-02-09 14:58:26,641 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 14:58:28,452 - INFO - Command completed successfully in 1.81s
+2026-02-09 14:58:28,453 - INFO - Completed Test.linting
+2026-02-09 14:58:28,454 - INFO - Executing Test.type_check
+2026-02-09 14:58:28,454 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 14:58:30,196 - INFO - Command completed successfully in 1.74s
+2026-02-09 14:58:30,197 - INFO - Completed Test.type_check
+2026-02-09 14:58:30,525 - INFO - Starting stage: Deploy
+2026-02-09 14:58:30,540 - INFO - Executing Deploy.package
+2026-02-09 14:58:30,542 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 14:58:30,648 - INFO - Command completed successfully in 0.11s
+2026-02-09 14:58:30,652 - INFO - Completed Deploy.package
+2026-02-09 14:58:30,682 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 14:58:37,266 - INFO - Created sample project files
+2026-02-09 14:59:53,672 - INFO - Starting stage: Build
+2026-02-09 14:59:53,673 - INFO - Executing Build.clean
+2026-02-09 14:59:53,674 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 14:59:53,713 - INFO - Command completed successfully in 0.04s
+2026-02-09 14:59:53,713 - INFO - Completed Build.clean
+2026-02-09 14:59:53,715 - INFO - Executing Build.install_deps
+2026-02-09 14:59:53,715 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 14:59:57,210 - INFO - Created sample project files
+2026-02-09 14:59:57,878 - INFO - Command completed successfully in 4.16s
+2026-02-09 14:59:57,879 - INFO - Completed Build.install_deps
+2026-02-09 14:59:57,880 - INFO - Executing Build.build
+2026-02-09 14:59:57,880 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 14:59:58,344 - INFO - Command completed successfully in 0.46s
+2026-02-09 14:59:58,344 - INFO - Completed Build.build
+2026-02-09 14:59:58,351 - INFO - Starting stage: Test
+2026-02-09 14:59:58,351 - INFO - Executing Test.unit_tests
+2026-02-09 14:59:58,352 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 14:59:58,626 - INFO - Command completed successfully in 0.27s
+2026-02-09 14:59:58,626 - INFO - Completed Test.unit_tests
+2026-02-09 14:59:58,626 - INFO - Executing Test.linting
+2026-02-09 14:59:58,626 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 14:59:59,670 - INFO - Command completed successfully in 1.04s
+2026-02-09 14:59:59,671 - INFO - Completed Test.linting
+2026-02-09 14:59:59,672 - INFO - Executing Test.type_check
+2026-02-09 14:59:59,673 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 15:00:01,152 - INFO - Command completed successfully in 1.48s
+2026-02-09 15:00:01,154 - INFO - Completed Test.type_check
+2026-02-09 15:04:01,255 - INFO - Starting stage: Build
+2026-02-09 15:04:01,260 - INFO - Executing Build.clean
+2026-02-09 15:04:01,261 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:04:01,367 - INFO - Command completed successfully in 0.11s
+2026-02-09 15:04:01,368 - INFO - Completed Build.clean
+2026-02-09 15:04:01,368 - INFO - Executing Build.install_deps
+2026-02-09 15:04:01,369 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:04:03,896 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 15:04:04,381 - INFO - Command completed successfully in 3.01s
+2026-02-09 15:04:04,381 - INFO - Completed Build.install_deps
+2026-02-09 15:04:04,382 - INFO - Executing Build.build
+2026-02-09 15:04:04,383 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 15:04:04,779 - INFO - Command completed successfully in 0.40s
+2026-02-09 15:04:04,780 - INFO - Completed Build.build
+2026-02-09 15:04:04,780 - INFO - Starting stage: Test
+2026-02-09 15:04:04,780 - INFO - Executing Test.unit_tests
+2026-02-09 15:04:04,780 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 15:04:05,067 - INFO - Command completed successfully in 0.29s
+2026-02-09 15:04:05,068 - INFO - Completed Test.unit_tests
+2026-02-09 15:04:05,068 - INFO - Executing Test.linting
+2026-02-09 15:04:05,068 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 15:04:06,689 - INFO - Command completed successfully in 1.62s
+2026-02-09 15:04:06,689 - INFO - Completed Test.linting
+2026-02-09 15:04:06,689 - INFO - Executing Test.type_check
+2026-02-09 15:04:06,691 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 15:04:08,008 - INFO - Command completed successfully in 1.32s
+2026-02-09 15:04:08,008 - INFO - Completed Test.type_check
+2026-02-09 15:04:08,009 - INFO - Starting stage: Deploy
+2026-02-09 15:04:08,009 - INFO - Executing Deploy.package
+2026-02-09 15:04:08,010 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 15:04:08,048 - INFO - Command completed successfully in 0.04s
+2026-02-09 15:04:08,049 - INFO - Completed Deploy.package
+2026-02-09 15:04:11,133 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 15:04:40,275 - INFO - Created sample project files
+2026-02-09 15:04:54,519 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/AppData/Local/Programs/Python/Python313/Doc/html/index.html'
+2026-02-09 15:04:59,636 - INFO - Starting stage: Build
+2026-02-09 15:04:59,637 - INFO - Executing Build.clean
+2026-02-09 15:04:59,637 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:04:59,677 - INFO - Command completed successfully in 0.04s
+2026-02-09 15:04:59,678 - INFO - Completed Build.clean
+2026-02-09 15:04:59,679 - INFO - Executing Build.install_deps
+2026-02-09 15:04:59,679 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:05:02,772 - INFO - Command completed successfully in 3.09s
+2026-02-09 15:05:02,773 - INFO - Completed Build.install_deps
+2026-02-09 15:05:02,774 - INFO - Executing Build.build
+2026-02-09 15:05:02,774 - INFO - Running command: python -m py_compile *.py
+2026-02-09 15:05:02,955 - ERROR - Command failed with exit code 1
+2026-02-09 15:05:02,955 - ERROR - Stage Build failed at build
+2026-02-09 15:05:04,981 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 15:05:19,701 - INFO - Starting stage: Build
+2026-02-09 15:05:19,702 - INFO - Executing Build.clean
+2026-02-09 15:05:19,705 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:05:19,746 - INFO - Command completed successfully in 0.04s
+2026-02-09 15:05:19,747 - INFO - Completed Build.clean
+2026-02-09 15:05:19,747 - INFO - Executing Build.install_deps
+2026-02-09 15:05:19,748 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:05:23,340 - INFO - Command completed successfully in 3.59s
+2026-02-09 15:05:23,340 - INFO - Completed Build.install_deps
+2026-02-09 15:05:23,341 - INFO - Executing Build.build
+2026-02-09 15:05:23,342 - INFO - Running command: python -m py_compile *.py
+2026-02-09 15:05:23,544 - ERROR - Command failed with exit code 1
+2026-02-09 15:05:23,544 - ERROR - Stage Build failed at build
+2026-02-09 15:05:25,270 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 15:05:37,252 - INFO - Starting stage: Build
+2026-02-09 15:05:37,252 - INFO - Executing Build.clean
+2026-02-09 15:05:37,254 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:05:37,288 - INFO - Command completed successfully in 0.03s
+2026-02-09 15:05:37,289 - INFO - Completed Build.clean
+2026-02-09 15:05:37,289 - INFO - Executing Build.install_deps
+2026-02-09 15:05:37,290 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:05:40,194 - INFO - Command completed successfully in 2.90s
+2026-02-09 15:05:40,194 - INFO - Completed Build.install_deps
+2026-02-09 15:05:40,196 - INFO - Executing Build.build
+2026-02-09 15:05:40,196 - INFO - Running command: python -m py_compile *.py
+2026-02-09 15:05:40,426 - ERROR - Command failed with exit code 1
+2026-02-09 15:05:40,428 - ERROR - Stage Build failed at build
+2026-02-09 15:05:44,344 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 15:05:45,841 - INFO - Created sample project files
+2026-02-09 15:05:54,358 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/AppData/Local/Programs/Python/Python313/Doc/html/index.html'
+2026-02-09 15:05:55,581 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/AppData/Local/Programs/Python/Python313/Doc/html/index.html'
+2026-02-09 15:08:01,421 - INFO - Starting CI pipeline for MyProject
+2026-02-09 15:08:01,422 - INFO - Starting stage: Build
+2026-02-09 15:08:01,422 - INFO - Executing Build.clean
+2026-02-09 15:08:01,422 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:08:01,484 - INFO - Command completed successfully in 0.06s
+2026-02-09 15:08:01,485 - INFO - Completed Build.clean
+2026-02-09 15:08:01,485 - INFO - Executing Build.install_deps
+2026-02-09 15:08:01,486 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:08:03,557 - INFO - Command completed successfully in 2.07s
+2026-02-09 15:08:03,558 - INFO - Completed Build.install_deps
+2026-02-09 15:08:03,558 - INFO - Executing Build.build
+2026-02-09 15:08:03,558 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 15:08:03,777 - INFO - Command completed successfully in 0.22s
+2026-02-09 15:08:03,777 - INFO - Completed Build.build
+2026-02-09 15:08:03,777 - INFO - Starting stage: Test
+2026-02-09 15:08:03,777 - INFO - Executing Test.unit_tests
+2026-02-09 15:08:03,778 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 15:08:03,926 - INFO - Command completed successfully in 0.15s
+2026-02-09 15:08:03,926 - INFO - Completed Test.unit_tests
+2026-02-09 15:08:03,927 - INFO - Executing Test.linting
+2026-02-09 15:08:03,927 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 15:08:05,142 - INFO - Command completed successfully in 1.22s
+2026-02-09 15:08:05,142 - INFO - Completed Test.linting
+2026-02-09 15:08:05,143 - INFO - Executing Test.type_check
+2026-02-09 15:08:05,143 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 15:08:06,005 - INFO - Command completed successfully in 0.86s
+2026-02-09 15:08:06,005 - INFO - Completed Test.type_check
+2026-02-09 15:08:06,005 - INFO - Starting stage: Deploy
+2026-02-09 15:08:06,006 - INFO - Executing Deploy.package
+2026-02-09 15:08:06,006 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 15:08:06,028 - INFO - Command completed successfully in 0.02s
+2026-02-09 15:08:06,029 - INFO - Completed Deploy.package
+2026-02-09 15:08:06,032 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 15:08:06,032 - INFO - Pipeline completed in 4.61s with status: SUCCESS
+2026-02-09 15:10:31,797 - INFO - Starting stage: Build
+2026-02-09 15:10:31,799 - INFO - Executing Build.clean
+2026-02-09 15:10:31,799 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:10:31,866 - INFO - Command completed successfully in 0.07s
+2026-02-09 15:10:31,866 - INFO - Completed Build.clean
+2026-02-09 15:10:31,867 - INFO - Executing Build.install_deps
+2026-02-09 15:10:31,867 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:10:34,771 - INFO - Command completed successfully in 2.90s
+2026-02-09 15:10:34,773 - INFO - Completed Build.install_deps
+2026-02-09 15:10:34,773 - INFO - Executing Build.build
+2026-02-09 15:10:34,773 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 15:10:35,108 - INFO - Command completed successfully in 0.33s
+2026-02-09 15:10:35,108 - INFO - Completed Build.build
+2026-02-09 15:10:35,187 - INFO - Starting stage: Test
+2026-02-09 15:10:35,188 - INFO - Executing Test.unit_tests
+2026-02-09 15:10:35,188 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 15:10:35,445 - INFO - Command completed successfully in 0.26s
+2026-02-09 15:10:35,446 - INFO - Completed Test.unit_tests
+2026-02-09 15:10:35,446 - INFO - Executing Test.linting
+2026-02-09 15:10:35,447 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 15:10:36,263 - INFO - Created sample project files
+2026-02-09 15:10:37,003 - INFO - Command completed successfully in 1.56s
+2026-02-09 15:10:37,004 - INFO - Completed Test.linting
+2026-02-09 15:10:37,004 - INFO - Executing Test.type_check
+2026-02-09 15:10:37,004 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 15:10:38,050 - INFO - Command completed successfully in 1.05s
+2026-02-09 15:10:38,051 - INFO - Completed Test.type_check
+2026-02-09 15:10:38,067 - INFO - Starting stage: Deploy
+2026-02-09 15:10:38,067 - INFO - Executing Deploy.package
+2026-02-09 15:10:38,068 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 15:10:38,109 - INFO - Command completed successfully in 0.04s
+2026-02-09 15:10:38,110 - INFO - Completed Deploy.package
+2026-02-09 15:10:57,300 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/AppData/Local/Programs/Python/Python313/Doc/html/index.html'
+2026-02-09 15:11:02,732 - INFO - Starting stage: Build
+2026-02-09 15:11:02,732 - INFO - Executing Build.clean
+2026-02-09 15:11:02,732 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:11:02,755 - INFO - Command completed successfully in 0.02s
+2026-02-09 15:11:02,755 - INFO - Completed Build.clean
+2026-02-09 15:11:02,755 - INFO - Executing Build.install_deps
+2026-02-09 15:11:02,756 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:11:04,607 - INFO - Command completed successfully in 1.85s
+2026-02-09 15:11:04,607 - INFO - Completed Build.install_deps
+2026-02-09 15:11:04,608 - INFO - Executing Build.build
+2026-02-09 15:11:04,608 - INFO - Running command: python -m py_compile *.py
+2026-02-09 15:11:04,742 - ERROR - Command failed with exit code 1
+2026-02-09 15:11:04,743 - ERROR - Stage Build failed at build
+2026-02-09 15:11:15,992 - INFO - Created sample project files
+2026-02-09 15:11:45,938 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/AppData/Local/Programs/Python/Python313/Doc/html/index.html'
+2026-02-09 15:11:46,882 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/AppData/Local/Programs/Python/Python313/Doc/html/index.html'
+2026-02-09 15:12:04,877 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/OneDrive/Desktop/Weka-3-8-6/documentation.html'
+2026-02-09 15:12:13,001 - INFO - Starting stage: Build
+2026-02-09 15:12:13,001 - INFO - Executing Build.clean
+2026-02-09 15:12:13,002 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:12:13,024 - INFO - Command completed successfully in 0.02s
+2026-02-09 15:12:13,024 - INFO - Completed Build.clean
+2026-02-09 15:12:13,024 - INFO - Executing Build.install_deps
+2026-02-09 15:12:13,025 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:12:15,126 - INFO - Command completed successfully in 2.10s
+2026-02-09 15:12:15,126 - INFO - Completed Build.install_deps
+2026-02-09 15:12:15,126 - INFO - Executing Build.build
+2026-02-09 15:12:15,126 - INFO - Running command: python -m py_compile *.py
+2026-02-09 15:12:15,241 - ERROR - Command failed with exit code 1
+2026-02-09 15:12:15,242 - ERROR - Stage Build failed at build
+2026-02-09 15:12:17,781 - INFO - Created sample project files
+2026-02-09 15:15:17,586 - INFO - Starting stage: Build
+2026-02-09 15:15:17,595 - INFO - Executing Build.clean
+2026-02-09 15:15:17,596 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 15:15:17,646 - INFO - Command completed successfully in 0.05s
+2026-02-09 15:15:17,647 - INFO - Completed Build.clean
+2026-02-09 15:15:17,647 - INFO - Executing Build.install_deps
+2026-02-09 15:15:17,647 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 15:15:21,552 - INFO - Command completed successfully in 3.91s
+2026-02-09 15:15:21,553 - INFO - Completed Build.install_deps
+2026-02-09 15:15:21,554 - INFO - Executing Build.build
+2026-02-09 15:15:21,554 - INFO - Running command: python -m py_compile *.py
+2026-02-09 15:15:21,687 - ERROR - Command failed with exit code 1
+2026-02-09 15:15:21,689 - ERROR - Stage Build failed at build
+2026-02-09 15:15:26,703 - INFO - Created sample project files
+2026-02-09 15:15:29,397 - INFO - Created sample project files
+2026-02-09 17:49:45,670 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:49:45,680 - INFO - Starting stage: Build
+2026-02-09 17:49:45,693 - INFO - Executing Build.clean
+2026-02-09 17:49:45,694 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:49:45,900 - INFO - Command completed successfully in 0.21s
+2026-02-09 17:49:45,903 - INFO - Completed Build.clean
+2026-02-09 17:49:45,904 - INFO - Executing Build.install_deps
+2026-02-09 17:49:45,905 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:49:54,505 - INFO - Command completed successfully in 8.60s
+2026-02-09 17:49:54,507 - INFO - Completed Build.install_deps
+2026-02-09 17:49:54,509 - INFO - Executing Build.build
+2026-02-09 17:49:54,509 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 17:49:55,160 - INFO - Command completed successfully in 0.65s
+2026-02-09 17:49:55,162 - INFO - Completed Build.build
+2026-02-09 17:49:55,163 - INFO - Starting stage: Test
+2026-02-09 17:49:55,163 - INFO - Executing Test.unit_tests
+2026-02-09 17:49:55,164 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 17:49:55,585 - INFO - Command completed successfully in 0.42s
+2026-02-09 17:49:55,586 - INFO - Completed Test.unit_tests
+2026-02-09 17:49:55,586 - INFO - Executing Test.linting
+2026-02-09 17:49:55,587 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 17:49:57,219 - INFO - Command completed successfully in 1.63s
+2026-02-09 17:49:57,220 - INFO - Completed Test.linting
+2026-02-09 17:49:57,221 - INFO - Executing Test.type_check
+2026-02-09 17:49:57,221 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 17:49:59,547 - INFO - Command completed successfully in 2.33s
+2026-02-09 17:49:59,549 - INFO - Completed Test.type_check
+2026-02-09 17:49:59,550 - INFO - Starting stage: Deploy
+2026-02-09 17:49:59,550 - INFO - Executing Deploy.package
+2026-02-09 17:49:59,550 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 17:49:59,620 - INFO - Command completed successfully in 0.07s
+2026-02-09 17:49:59,621 - INFO - Completed Deploy.package
+2026-02-09 17:49:59,627 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 17:49:59,627 - INFO - Pipeline completed in 13.95s with status: SUCCESS
+2026-02-09 17:51:06,118 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:51:06,120 - INFO - Starting stage: Build
+2026-02-09 17:51:06,120 - INFO - Executing Build.clean
+2026-02-09 17:51:06,121 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:51:06,206 - INFO - Command completed successfully in 0.08s
+2026-02-09 17:51:06,207 - INFO - Completed Build.clean
+2026-02-09 17:51:06,207 - INFO - Executing Build.install_deps
+2026-02-09 17:51:06,207 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:51:08,817 - ERROR - Command failed with exit code 3221225786
+2026-02-09 17:52:10,294 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:52:10,295 - INFO - Starting stage: Build
+2026-02-09 17:52:10,295 - INFO - Executing Build.clean
+2026-02-09 17:52:10,296 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:52:10,361 - INFO - Command completed successfully in 0.07s
+2026-02-09 17:52:10,362 - INFO - Completed Build.clean
+2026-02-09 17:52:10,363 - INFO - Executing Build.install_deps
+2026-02-09 17:52:10,363 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:53:10,632 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:53:10,634 - INFO - Starting stage: Build
+2026-02-09 17:53:10,634 - INFO - Executing Build.clean
+2026-02-09 17:53:10,634 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:53:10,732 - INFO - Command completed successfully in 0.10s
+2026-02-09 17:53:10,733 - INFO - Completed Build.clean
+2026-02-09 17:53:10,733 - INFO - Executing Build.install_deps
+2026-02-09 17:53:10,734 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:53:16,890 - INFO - Command completed successfully in 6.16s
+2026-02-09 17:53:16,894 - INFO - Completed Build.install_deps
+2026-02-09 17:53:16,896 - INFO - Executing Build.build
+2026-02-09 17:53:16,897 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 17:53:17,683 - INFO - Command completed successfully in 0.79s
+2026-02-09 17:53:17,685 - INFO - Completed Build.build
+2026-02-09 17:53:17,686 - INFO - Starting stage: Test
+2026-02-09 17:53:17,687 - INFO - Executing Test.unit_tests
+2026-02-09 17:53:17,687 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 17:53:18,135 - INFO - Command completed successfully in 0.45s
+2026-02-09 17:53:18,136 - INFO - Completed Test.unit_tests
+2026-02-09 17:53:18,137 - INFO - Executing Test.linting
+2026-02-09 17:53:18,137 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 17:53:19,711 - INFO - Command completed successfully in 1.57s
+2026-02-09 17:53:19,712 - INFO - Completed Test.linting
+2026-02-09 17:53:19,713 - INFO - Executing Test.type_check
+2026-02-09 17:53:19,714 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 17:54:32,290 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:54:32,291 - INFO - Starting stage: Build
+2026-02-09 17:54:32,291 - INFO - Executing Build.clean
+2026-02-09 17:54:32,292 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:54:32,375 - INFO - Command completed successfully in 0.08s
+2026-02-09 17:54:32,377 - INFO - Completed Build.clean
+2026-02-09 17:54:32,378 - INFO - Executing Build.install_deps
+2026-02-09 17:54:32,378 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:54:36,787 - INFO - Command completed successfully in 4.41s
+2026-02-09 17:54:36,787 - INFO - Completed Build.install_deps
+2026-02-09 17:54:36,788 - INFO - Executing Build.build
+2026-02-09 17:54:36,788 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 17:54:37,226 - INFO - Command completed successfully in 0.44s
+2026-02-09 17:54:37,227 - INFO - Completed Build.build
+2026-02-09 17:54:37,228 - INFO - Starting stage: Test
+2026-02-09 17:54:37,228 - INFO - Executing Test.unit_tests
+2026-02-09 17:54:37,228 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 17:54:37,499 - INFO - Command completed successfully in 0.27s
+2026-02-09 17:54:37,500 - INFO - Completed Test.unit_tests
+2026-02-09 17:54:37,501 - INFO - Executing Test.linting
+2026-02-09 17:54:37,501 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 17:54:38,577 - INFO - Command completed successfully in 1.08s
+2026-02-09 17:54:38,578 - INFO - Completed Test.linting
+2026-02-09 17:54:38,578 - INFO - Executing Test.type_check
+2026-02-09 17:54:38,579 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 17:54:40,178 - INFO - Command completed successfully in 1.60s
+2026-02-09 17:54:40,179 - INFO - Completed Test.type_check
+2026-02-09 17:54:40,179 - INFO - Starting stage: Deploy
+2026-02-09 17:54:40,179 - INFO - Executing Deploy.package
+2026-02-09 17:54:40,180 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 17:54:40,240 - INFO - Command completed successfully in 0.06s
+2026-02-09 17:54:40,242 - INFO - Completed Deploy.package
+2026-02-09 17:54:40,246 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 17:54:40,247 - INFO - Pipeline completed in 7.96s with status: SUCCESS
+2026-02-09 17:56:07,011 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:56:07,013 - INFO - Starting stage: Build
+2026-02-09 17:56:07,013 - INFO - Executing Build.clean
+2026-02-09 17:56:07,014 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:56:07,168 - INFO - Command completed successfully in 0.15s
+2026-02-09 17:56:07,172 - INFO - Completed Build.clean
+2026-02-09 17:56:07,173 - INFO - Executing Build.install_deps
+2026-02-09 17:56:07,173 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:56:11,100 - INFO - Command completed successfully in 3.93s
+2026-02-09 17:56:11,102 - INFO - Completed Build.install_deps
+2026-02-09 17:56:11,103 - INFO - Executing Build.build
+2026-02-09 17:56:11,103 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 17:56:11,569 - INFO - Command completed successfully in 0.47s
+2026-02-09 17:56:11,570 - INFO - Completed Build.build
+2026-02-09 17:56:11,571 - INFO - Starting stage: Test
+2026-02-09 17:56:11,571 - INFO - Executing Test.unit_tests
+2026-02-09 17:56:11,572 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 17:56:11,833 - INFO - Command completed successfully in 0.26s
+2026-02-09 17:56:11,835 - INFO - Completed Test.unit_tests
+2026-02-09 17:56:11,836 - INFO - Executing Test.linting
+2026-02-09 17:56:11,836 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 17:56:12,915 - INFO - Command completed successfully in 1.08s
+2026-02-09 17:56:12,916 - INFO - Completed Test.linting
+2026-02-09 17:56:12,916 - INFO - Executing Test.type_check
+2026-02-09 17:56:12,917 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 17:56:14,329 - INFO - Command completed successfully in 1.41s
+2026-02-09 17:56:14,329 - INFO - Completed Test.type_check
+2026-02-09 17:56:14,330 - INFO - Starting stage: Deploy
+2026-02-09 17:56:14,330 - INFO - Executing Deploy.package
+2026-02-09 17:56:14,330 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 17:56:14,387 - INFO - Command completed successfully in 0.06s
+2026-02-09 17:56:14,389 - INFO - Completed Deploy.package
+2026-02-09 17:56:14,392 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 17:56:14,393 - INFO - Pipeline completed in 7.38s with status: SUCCESS
+2026-02-09 17:56:28,322 - INFO - Starting CI pipeline for MyProject
+2026-02-09 17:56:28,322 - INFO - Starting stage: Build
+2026-02-09 17:56:28,323 - INFO - Executing Build.clean
+2026-02-09 17:56:28,323 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:56:28,406 - INFO - Command completed successfully in 0.08s
+2026-02-09 17:56:28,409 - INFO - Completed Build.clean
+2026-02-09 17:56:28,409 - INFO - Executing Build.install_deps
+2026-02-09 17:56:28,409 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:56:31,958 - INFO - Command completed successfully in 3.55s
+2026-02-09 17:56:31,959 - INFO - Completed Build.install_deps
+2026-02-09 17:56:31,959 - INFO - Executing Build.build
+2026-02-09 17:56:31,959 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 17:56:32,435 - INFO - Command completed successfully in 0.48s
+2026-02-09 17:56:32,435 - INFO - Completed Build.build
+2026-02-09 17:56:32,436 - INFO - Starting stage: Test
+2026-02-09 17:56:32,436 - INFO - Executing Test.unit_tests
+2026-02-09 17:56:32,436 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 17:56:32,698 - INFO - Command completed successfully in 0.26s
+2026-02-09 17:56:32,699 - INFO - Completed Test.unit_tests
+2026-02-09 17:56:32,699 - INFO - Executing Test.linting
+2026-02-09 17:56:32,700 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 17:56:33,386 - INFO - Command completed successfully in 0.69s
+2026-02-09 17:56:33,387 - INFO - Completed Test.linting
+2026-02-09 17:56:33,387 - INFO - Executing Test.type_check
+2026-02-09 17:56:33,387 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 17:56:34,080 - INFO - Command completed successfully in 0.69s
+2026-02-09 17:56:34,081 - INFO - Completed Test.type_check
+2026-02-09 17:56:34,081 - INFO - Starting stage: Deploy
+2026-02-09 17:56:34,081 - INFO - Executing Deploy.package
+2026-02-09 17:56:34,081 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 17:56:34,134 - INFO - Command completed successfully in 0.05s
+2026-02-09 17:56:34,136 - INFO - Completed Deploy.package
+2026-02-09 17:56:34,141 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 17:56:34,142 - INFO - Pipeline completed in 5.82s with status: SUCCESS
+2026-02-09 17:58:46,315 - INFO - Starting stage: Build
+2026-02-09 17:58:46,317 - INFO - Executing Build.clean
+2026-02-09 17:58:46,317 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 17:58:46,405 - INFO - Command completed successfully in 0.09s
+2026-02-09 17:58:46,405 - INFO - Completed Build.clean
+2026-02-09 17:58:46,405 - INFO - Executing Build.install_deps
+2026-02-09 17:58:46,407 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 17:58:48,157 - INFO - Created sample project files
+2026-02-09 17:58:51,609 - INFO - Command completed successfully in 5.20s
+2026-02-09 17:58:51,610 - INFO - Completed Build.install_deps
+2026-02-09 17:58:51,612 - INFO - Executing Build.build
+2026-02-09 17:58:51,612 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 17:58:52,016 - INFO - Command completed successfully in 0.40s
+2026-02-09 17:58:52,017 - INFO - Completed Build.build
+2026-02-09 17:58:52,110 - INFO - Starting stage: Test
+2026-02-09 17:58:52,110 - INFO - Executing Test.unit_tests
+2026-02-09 17:58:52,111 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 17:58:52,433 - INFO - Command completed successfully in 0.32s
+2026-02-09 17:58:52,434 - INFO - Completed Test.unit_tests
+2026-02-09 17:58:52,434 - INFO - Executing Test.linting
+2026-02-09 17:58:52,434 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 17:58:53,517 - INFO - Command completed successfully in 1.08s
+2026-02-09 17:58:53,518 - INFO - Completed Test.linting
+2026-02-09 17:58:53,518 - INFO - Executing Test.type_check
+2026-02-09 17:58:53,519 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 17:58:55,009 - INFO - Command completed successfully in 1.49s
+2026-02-09 17:58:55,011 - INFO - Completed Test.type_check
+2026-02-09 17:58:55,028 - INFO - Starting stage: Deploy
+2026-02-09 17:58:55,029 - INFO - Executing Deploy.package
+2026-02-09 17:58:55,029 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 17:58:55,074 - INFO - Command completed successfully in 0.04s
+2026-02-09 17:58:55,075 - INFO - Completed Deploy.package
+2026-02-09 18:00:49,530 - INFO - Starting stage: Build
+2026-02-09 18:00:49,536 - INFO - Executing Build.clean
+2026-02-09 18:00:49,537 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:00:49,582 - INFO - Command completed successfully in 0.04s
+2026-02-09 18:00:49,583 - INFO - Completed Build.clean
+2026-02-09 18:00:49,584 - INFO - Executing Build.install_deps
+2026-02-09 18:00:49,584 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:00:52,981 - INFO - Command completed successfully in 3.40s
+2026-02-09 18:00:52,983 - INFO - Completed Build.install_deps
+2026-02-09 18:00:52,984 - INFO - Executing Build.build
+2026-02-09 18:00:52,985 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 18:00:53,429 - INFO - Command completed successfully in 0.44s
+2026-02-09 18:00:53,430 - INFO - Completed Build.build
+2026-02-09 18:00:53,517 - INFO - Starting stage: Test
+2026-02-09 18:00:53,518 - INFO - Executing Test.unit_tests
+2026-02-09 18:00:53,519 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 18:00:53,766 - INFO - Command completed successfully in 0.25s
+2026-02-09 18:00:53,769 - INFO - Completed Test.unit_tests
+2026-02-09 18:00:53,769 - INFO - Executing Test.linting
+2026-02-09 18:00:53,769 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 18:00:54,434 - INFO - Command completed successfully in 0.66s
+2026-02-09 18:00:54,436 - INFO - Completed Test.linting
+2026-02-09 18:00:54,436 - INFO - Executing Test.type_check
+2026-02-09 18:00:54,437 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 18:00:55,197 - INFO - Command completed successfully in 0.76s
+2026-02-09 18:00:55,197 - INFO - Completed Test.type_check
+2026-02-09 18:00:55,212 - INFO - Starting stage: Deploy
+2026-02-09 18:00:55,213 - INFO - Executing Deploy.package
+2026-02-09 18:00:55,213 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 18:00:55,248 - INFO - Command completed successfully in 0.03s
+2026-02-09 18:00:55,249 - INFO - Completed Deploy.package
+2026-02-09 18:00:58,265 - INFO - Starting stage: Build
+2026-02-09 18:00:58,267 - INFO - Executing Build.clean
+2026-02-09 18:00:58,268 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:00:58,298 - INFO - Command completed successfully in 0.03s
+2026-02-09 18:00:58,298 - INFO - Completed Build.clean
+2026-02-09 18:00:58,299 - INFO - Executing Build.install_deps
+2026-02-09 18:00:58,299 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:01:01,473 - INFO - Command completed successfully in 3.17s
+2026-02-09 18:01:01,474 - INFO - Completed Build.install_deps
+2026-02-09 18:01:01,474 - INFO - Executing Build.build
+2026-02-09 18:01:01,474 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 18:01:01,992 - INFO - Command completed successfully in 0.52s
+2026-02-09 18:01:01,993 - INFO - Completed Build.build
+2026-02-09 18:01:02,073 - INFO - Starting stage: Test
+2026-02-09 18:01:02,074 - INFO - Executing Test.unit_tests
+2026-02-09 18:01:02,074 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 18:01:02,304 - INFO - Command completed successfully in 0.23s
+2026-02-09 18:01:02,304 - INFO - Completed Test.unit_tests
+2026-02-09 18:01:02,304 - INFO - Executing Test.linting
+2026-02-09 18:01:02,304 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 18:01:02,930 - INFO - Command completed successfully in 0.62s
+2026-02-09 18:01:02,930 - INFO - Completed Test.linting
+2026-02-09 18:01:02,931 - INFO - Executing Test.type_check
+2026-02-09 18:01:02,931 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 18:01:03,615 - INFO - Command completed successfully in 0.68s
+2026-02-09 18:01:03,618 - INFO - Completed Test.type_check
+2026-02-09 18:01:03,636 - INFO - Starting stage: Deploy
+2026-02-09 18:01:03,636 - INFO - Executing Deploy.package
+2026-02-09 18:01:03,637 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 18:01:03,662 - INFO - Command completed successfully in 0.03s
+2026-02-09 18:01:03,664 - INFO - Completed Deploy.package
+2026-02-09 18:01:39,807 - INFO - Starting CI pipeline for MyProject
+2026-02-09 18:01:39,808 - INFO - Starting stage: Build
+2026-02-09 18:01:39,808 - INFO - Executing Build.clean
+2026-02-09 18:01:39,808 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:01:39,879 - INFO - Command completed successfully in 0.07s
+2026-02-09 18:01:39,880 - INFO - Completed Build.clean
+2026-02-09 18:01:39,880 - INFO - Executing Build.install_deps
+2026-02-09 18:01:39,880 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:01:42,428 - INFO - Command completed successfully in 2.55s
+2026-02-09 18:01:42,429 - INFO - Completed Build.install_deps
+2026-02-09 18:01:42,429 - INFO - Executing Build.build
+2026-02-09 18:01:42,429 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 18:01:42,908 - INFO - Command completed successfully in 0.48s
+2026-02-09 18:01:42,909 - INFO - Completed Build.build
+2026-02-09 18:01:42,909 - INFO - Starting stage: Test
+2026-02-09 18:01:42,910 - INFO - Executing Test.unit_tests
+2026-02-09 18:01:42,910 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 18:01:43,163 - INFO - Command completed successfully in 0.25s
+2026-02-09 18:01:43,164 - INFO - Completed Test.unit_tests
+2026-02-09 18:01:43,164 - INFO - Executing Test.linting
+2026-02-09 18:01:43,165 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 18:01:43,886 - INFO - Command completed successfully in 0.72s
+2026-02-09 18:01:43,888 - INFO - Completed Test.linting
+2026-02-09 18:01:43,888 - INFO - Executing Test.type_check
+2026-02-09 18:01:43,888 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 18:01:44,653 - INFO - Command completed successfully in 0.76s
+2026-02-09 18:01:44,653 - INFO - Completed Test.type_check
+2026-02-09 18:01:44,653 - INFO - Starting stage: Deploy
+2026-02-09 18:01:44,654 - INFO - Executing Deploy.package
+2026-02-09 18:01:44,654 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 18:01:44,708 - INFO - Command completed successfully in 0.05s
+2026-02-09 18:01:44,709 - INFO - Completed Deploy.package
+2026-02-09 18:01:44,711 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 18:01:44,711 - INFO - Pipeline completed in 4.90s with status: SUCCESS
+2026-02-09 18:04:22,174 - INFO - Starting stage: Build
+2026-02-09 18:04:22,177 - INFO - Executing Build.clean
+2026-02-09 18:04:22,178 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:04:22,226 - INFO - Command completed successfully in 0.05s
+2026-02-09 18:04:22,227 - INFO - Completed Build.clean
+2026-02-09 18:04:22,228 - INFO - Executing Build.install_deps
+2026-02-09 18:04:22,228 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:04:26,137 - INFO - Command completed successfully in 3.91s
+2026-02-09 18:04:26,138 - INFO - Completed Build.install_deps
+2026-02-09 18:04:26,138 - INFO - Executing Build.build
+2026-02-09 18:04:26,139 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 18:04:26,543 - INFO - Command completed successfully in 0.40s
+2026-02-09 18:04:26,543 - INFO - Completed Build.build
+2026-02-09 18:04:26,631 - INFO - Starting stage: Test
+2026-02-09 18:04:26,633 - INFO - Executing Test.unit_tests
+2026-02-09 18:04:26,634 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 18:04:26,868 - INFO - Command completed successfully in 0.23s
+2026-02-09 18:04:26,869 - INFO - Completed Test.unit_tests
+2026-02-09 18:04:26,869 - INFO - Executing Test.linting
+2026-02-09 18:04:26,869 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 18:04:27,836 - INFO - Command completed successfully in 0.97s
+2026-02-09 18:04:27,837 - INFO - Completed Test.linting
+2026-02-09 18:04:27,837 - INFO - Executing Test.type_check
+2026-02-09 18:04:27,837 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 18:04:29,106 - INFO - Command completed successfully in 1.27s
+2026-02-09 18:04:29,107 - INFO - Completed Test.type_check
+2026-02-09 18:04:29,127 - INFO - Starting stage: Deploy
+2026-02-09 18:04:29,129 - INFO - Executing Deploy.package
+2026-02-09 18:04:29,129 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 18:04:29,169 - INFO - Command completed successfully in 0.04s
+2026-02-09 18:04:29,170 - INFO - Completed Deploy.package
+2026-02-09 18:17:06,883 - INFO - Starting stage: Build
+2026-02-09 18:17:06,898 - INFO - Executing Build.clean
+2026-02-09 18:17:06,899 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:17:06,968 - INFO - Command completed successfully in 0.07s
+2026-02-09 18:17:06,970 - INFO - Completed Build.clean
+2026-02-09 18:17:06,970 - INFO - Executing Build.install_deps
+2026-02-09 18:17:06,970 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:17:15,075 - INFO - Command completed successfully in 8.10s
+2026-02-09 18:17:15,075 - INFO - Completed Build.install_deps
+2026-02-09 18:17:15,075 - INFO - Executing Build.build
+2026-02-09 18:17:15,075 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 18:17:15,989 - INFO - Command completed successfully in 0.91s
+2026-02-09 18:17:16,003 - INFO - Completed Build.build
+2026-02-09 18:17:16,201 - INFO - Starting stage: Test
+2026-02-09 18:17:16,205 - INFO - Executing Test.unit_tests
+2026-02-09 18:17:16,205 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 18:17:16,645 - INFO - Command completed successfully in 0.44s
+2026-02-09 18:17:16,648 - INFO - Completed Test.unit_tests
+2026-02-09 18:17:16,654 - INFO - Executing Test.linting
+2026-02-09 18:17:16,656 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 18:17:18,309 - INFO - Command completed successfully in 1.65s
+2026-02-09 18:17:18,311 - INFO - Completed Test.linting
+2026-02-09 18:17:18,312 - INFO - Executing Test.type_check
+2026-02-09 18:17:18,315 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 18:17:20,218 - INFO - Command completed successfully in 1.90s
+2026-02-09 18:17:20,223 - INFO - Completed Test.type_check
+2026-02-09 18:17:20,302 - INFO - Starting stage: Deploy
+2026-02-09 18:17:20,305 - INFO - Executing Deploy.package
+2026-02-09 18:17:20,311 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 18:17:20,359 - INFO - Command completed successfully in 0.05s
+2026-02-09 18:17:20,361 - INFO - Completed Deploy.package
+2026-02-09 18:18:12,014 - INFO - Starting CI pipeline for MyProject
+2026-02-09 18:18:12,014 - INFO - Starting stage: Build
+2026-02-09 18:18:12,015 - INFO - Executing Build.clean
+2026-02-09 18:18:12,015 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:18:12,098 - INFO - Command completed successfully in 0.08s
+2026-02-09 18:18:12,099 - INFO - Completed Build.clean
+2026-02-09 18:18:12,099 - INFO - Executing Build.install_deps
+2026-02-09 18:18:12,099 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:18:14,439 - ERROR - Command failed with exit code 3221225786
+2026-02-09 18:18:21,673 - INFO - Starting CI pipeline for MyProject
+2026-02-09 18:18:21,673 - INFO - Starting stage: Build
+2026-02-09 18:18:21,674 - INFO - Executing Build.clean
+2026-02-09 18:18:21,674 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 18:18:21,734 - INFO - Command completed successfully in 0.06s
+2026-02-09 18:18:21,735 - INFO - Completed Build.clean
+2026-02-09 18:18:21,735 - INFO - Executing Build.install_deps
+2026-02-09 18:18:21,736 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 18:18:25,028 - INFO - Command completed successfully in 3.29s
+2026-02-09 18:18:25,028 - INFO - Completed Build.install_deps
+2026-02-09 18:18:25,029 - INFO - Executing Build.build
+2026-02-09 18:18:25,029 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 18:18:25,431 - INFO - Command completed successfully in 0.40s
+2026-02-09 18:18:25,432 - INFO - Completed Build.build
+2026-02-09 18:18:25,432 - INFO - Starting stage: Test
+2026-02-09 18:18:25,432 - INFO - Executing Test.unit_tests
+2026-02-09 18:18:25,433 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 18:18:25,655 - INFO - Command completed successfully in 0.22s
+2026-02-09 18:18:25,656 - INFO - Completed Test.unit_tests
+2026-02-09 18:18:25,657 - INFO - Executing Test.linting
+2026-02-09 18:18:25,657 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 18:18:26,671 - INFO - Command completed successfully in 1.01s
+2026-02-09 18:18:26,672 - INFO - Completed Test.linting
+2026-02-09 18:18:26,672 - INFO - Executing Test.type_check
+2026-02-09 18:18:26,672 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 18:18:27,996 - INFO - Command completed successfully in 1.32s
+2026-02-09 18:18:27,997 - INFO - Completed Test.type_check
+2026-02-09 18:18:27,997 - INFO - Starting stage: Deploy
+2026-02-09 18:18:27,997 - INFO - Executing Deploy.package
+2026-02-09 18:18:27,998 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 18:18:28,042 - INFO - Command completed successfully in 0.04s
+2026-02-09 18:18:28,043 - INFO - Completed Deploy.package
+2026-02-09 18:18:28,045 - INFO - Pipeline report saved to ci_report.json
+2026-02-09 18:18:28,046 - INFO - Pipeline completed in 6.37s with status: SUCCESS
+2026-02-09 20:08:49,909 - INFO - Created sample project files
+2026-02-09 20:09:09,162 - INFO - Created sample project files
+2026-02-09 20:10:17,186 - INFO - Starting stage: Build
+2026-02-09 20:10:17,188 - INFO - Executing Build.clean
+2026-02-09 20:10:17,188 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 20:10:17,250 - INFO - Command completed successfully in 0.06s
+2026-02-09 20:10:17,250 - INFO - Completed Build.clean
+2026-02-09 20:10:17,252 - INFO - Executing Build.install_deps
+2026-02-09 20:10:17,252 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 20:10:23,868 - INFO - Command completed successfully in 6.62s
+2026-02-09 20:10:23,869 - INFO - Completed Build.install_deps
+2026-02-09 20:10:23,870 - INFO - Executing Build.build
+2026-02-09 20:10:23,870 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 20:10:24,292 - INFO - Command completed successfully in 0.42s
+2026-02-09 20:10:24,295 - INFO - Completed Build.build
+2026-02-09 20:10:24,327 - INFO - Starting stage: Test
+2026-02-09 20:10:24,331 - INFO - Executing Test.unit_tests
+2026-02-09 20:10:24,331 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 20:10:24,662 - INFO - Command completed successfully in 0.33s
+2026-02-09 20:10:24,662 - INFO - Completed Test.unit_tests
+2026-02-09 20:10:24,664 - INFO - Executing Test.linting
+2026-02-09 20:10:24,664 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 20:10:25,909 - INFO - Command completed successfully in 1.24s
+2026-02-09 20:10:25,909 - INFO - Completed Test.linting
+2026-02-09 20:10:25,909 - INFO - Executing Test.type_check
+2026-02-09 20:10:25,911 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 20:10:26,068 - INFO - Created sample project files
+2026-02-09 20:10:27,547 - INFO - Command completed successfully in 1.64s
+2026-02-09 20:10:27,551 - INFO - Completed Test.type_check
+2026-02-09 20:10:27,571 - INFO - Starting stage: Deploy
+2026-02-09 20:10:27,574 - INFO - Executing Deploy.package
+2026-02-09 20:10:27,574 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 20:10:27,612 - INFO - Command completed successfully in 0.04s
+2026-02-09 20:10:27,612 - INFO - Completed Deploy.package
+2026-02-09 20:10:29,905 - INFO - Starting stage: Build
+2026-02-09 20:10:29,905 - INFO - Executing Build.clean
+2026-02-09 20:10:29,905 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 20:10:29,942 - INFO - Command completed successfully in 0.04s
+2026-02-09 20:10:29,942 - INFO - Completed Build.clean
+2026-02-09 20:10:29,944 - INFO - Executing Build.install_deps
+2026-02-09 20:10:29,945 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 20:10:33,214 - INFO - Command completed successfully in 3.27s
+2026-02-09 20:10:33,214 - INFO - Completed Build.install_deps
+2026-02-09 20:10:33,214 - INFO - Executing Build.build
+2026-02-09 20:10:33,217 - INFO - Running command: for /f %f in ('dir /b *.py') do python -m py_compile %f
+2026-02-09 20:10:33,683 - INFO - Command completed successfully in 0.47s
+2026-02-09 20:10:33,684 - INFO - Completed Build.build
+2026-02-09 20:10:33,724 - INFO - Starting stage: Test
+2026-02-09 20:10:33,725 - INFO - Executing Test.unit_tests
+2026-02-09 20:10:33,725 - INFO - Running command: python -m unittest discover tests/ -v
+2026-02-09 20:10:33,996 - INFO - Command completed successfully in 0.27s
+2026-02-09 20:10:33,997 - INFO - Completed Test.unit_tests
+2026-02-09 20:10:33,998 - INFO - Executing Test.linting
+2026-02-09 20:10:33,998 - INFO - Running command: flake8 *.py --max-line-length=100 || echo 'flake8 not available, skipping linting'
+2026-02-09 20:10:34,747 - INFO - Command completed successfully in 0.75s
+2026-02-09 20:10:34,747 - INFO - Completed Test.linting
+2026-02-09 20:10:34,750 - INFO - Executing Test.type_check
+2026-02-09 20:10:34,750 - INFO - Running command: mypy *.py || echo 'mypy not available, skipping type checking'
+2026-02-09 20:10:35,470 - INFO - Command completed successfully in 0.72s
+2026-02-09 20:10:35,470 - INFO - Completed Test.type_check
+2026-02-09 20:10:35,615 - INFO - Starting stage: Deploy
+2026-02-09 20:10:35,615 - INFO - Executing Deploy.package
+2026-02-09 20:10:35,617 - INFO - Running command: echo 'Packaging application...'
+2026-02-09 20:10:35,653 - INFO - Command completed successfully in 0.04s
+2026-02-09 20:10:35,655 - INFO - Completed Deploy.package
+2026-02-09 20:11:26,615 - ERROR - Could not create config file: [Errno 2] No such file or directory: 'C:/Users/DELL/OneDrive/Desktop/Weka-3-8-6/documentation.html'
+2026-02-09 20:11:27,678 - INFO - Starting stage: Build
+2026-02-09 20:11:27,678 - INFO - Executing Build.clean
+2026-02-09 20:11:27,678 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 20:11:27,714 - INFO - Command completed successfully in 0.04s
+2026-02-09 20:11:27,720 - INFO - Completed Build.clean
+2026-02-09 20:11:27,721 - INFO - Executing Build.install_deps
+2026-02-09 20:11:27,721 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 20:11:29,438 - INFO - Created sample project files
+2026-02-09 20:11:30,926 - INFO - Command completed successfully in 3.20s
+2026-02-09 20:11:30,927 - INFO - Completed Build.install_deps
+2026-02-09 20:11:30,927 - INFO - Executing Build.build
+2026-02-09 20:11:30,927 - INFO - Running command: python -m py_compile *.py
+2026-02-09 20:11:31,165 - ERROR - Command failed with exit code 1
+2026-02-09 20:11:31,167 - ERROR - Stage Build failed at build
+2026-02-09 20:11:33,215 - INFO - Created sample project files
+2026-02-09 20:12:35,510 - INFO - Created sample project files
+2026-02-09 20:16:05,372 - INFO - Starting CI pipeline for MyProject
+2026-02-09 20:16:05,372 - INFO - Starting stage: Build
+2026-02-09 20:16:05,373 - INFO - Executing Build.clean
+2026-02-09 20:16:05,373 - INFO - Running command: echo 'Cleaning build artifacts...'
+2026-02-09 20:16:05,452 - INFO - Command completed successfully in 0.08s
+2026-02-09 20:16:05,453 - INFO - Completed Build.clean
+2026-02-09 20:16:05,453 - INFO - Executing Build.install_deps
+2026-02-09 20:16:05,453 - INFO - Running command: pip install -r requirements.txt
+2026-02-09 20:16:09,637 - ERROR - Command failed with exit code 3221225786

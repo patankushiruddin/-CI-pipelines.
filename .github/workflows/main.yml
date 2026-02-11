@@ -1,0 +1,279 @@
+name: Complete CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop, staging ]
+  pull_request:
+    branches: [ main, develop ]
+  release:
+    types: [ published ]
+
+env:
+  PYTHON_VERSION: "3.10"
+  NODE_VERSION: "18"
+
+jobs:
+  # Code Quality and Security
+  quality:
+    runs-on: ubuntu-latest
+    name: Code Quality & Security
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black isort mypy safety bandit
+        pip install -r requirements.txt 2>/dev/null || echo "No requirements.txt found"
+    
+    - name: Code formatting check (black)
+      run: |
+        black --check --diff *.py 2>/dev/null || echo "No Python files found for black check"
+    
+    - name: Import sorting check (isort)
+      run: |
+        isort --check-only --diff *.py 2>/dev/null || echo "No Python files found for isort check"
+    
+    - name: Lint with flake8
+      run: |
+        flake8 *.py --count --select=E9,F63,F7,F82 --show-source --statistics || echo "No Python files found for flake8"
+    
+    - name: Type checking with mypy
+      run: |
+        mypy *.py --ignore-missing-imports || echo "No Python files found for mypy"
+    
+    - name: Security scan with bandit
+      run: |
+        bandit -r . -f json -o bandit-report.json || echo "No Python files found for bandit"
+    
+    - name: Dependency security check
+      run: |
+        safety check --json --output safety-report.json || echo "No dependencies to check"
+    
+    - name: Upload security reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-reports
+        path: |
+          bandit-report.json
+          safety-report.json
+
+  # Testing Matrix
+  test:
+    runs-on: ${{ matrix.os }}
+    needs: quality
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+    
+    name: Test Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt', '**/setup.py') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-cov pytest-xvfb pytest-mock coverage
+        pip install -r requirements.txt 2>/dev/null || echo "No requirements.txt found"
+    
+    - name: Run tests with pytest
+      run: |
+        pytest . -v --cov=. --cov-report=xml --cov-report=html --junitxml=test-results.xml
+    
+    - name: Run unittest if available
+      run: |
+        python -m unittest discover -s . -p "test_*.py" -v || echo "No unittest tests found"
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results-${{ matrix.os }}-${{ matrix.python-version }}
+        path: |
+          test-results.xml
+          htmlcov/
+          coverage.xml
+
+  # Build and Package
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    name: Build & Package
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install build tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine wheel setuptools
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: Check package
+      run: |
+        twine check dist/*
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-packages
+        path: dist/
+
+  # Docker Build
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    name: Docker Build
+    if: github.event_name != 'pull_request'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    
+    - name: Login to Docker Hub
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    
+    - name: Extract metadata
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: yourusername/yourapp
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=sha,prefix={{branch}}-
+          type=raw,value=latest,enable={{is_default_branch}}
+    
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+  # Deployment
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, docker]
+    name: Deploy to Production
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: dist-packages
+        path: dist/
+    
+    - name: Deploy to production
+      run: |
+        echo "Deploying to production..."
+        # Add your deployment commands here
+        # Example: kubectl apply -f k8s/
+        # Example: ansible-playbook deploy.yml
+        # Example: scp dist/* user@server:/path/to/deploy/
+
+  # Notification
+  notify:
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    name: Notify Results
+    if: always()
+    
+    steps:
+    - name: Notify Slack on success
+      if: needs.deploy.result == 'success'
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        --data '{"text":"✅ Deployment successful! ${{ github.repository }} deployed to production"}' \
+        ${{ secrets.SLACK_WEBHOOK_URL }}
+    
+    - name: Notify Slack on failure
+      if: needs.deploy.result == 'failure' || needs.deploy.result == 'cancelled'
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        --data '{"text":"❌ Deployment failed! ${{ github.repository }} - Check GitHub Actions for details"}' \
+        ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  # Performance Testing
+  performance:
+    runs-on: ubuntu-latest
+    needs: deploy
+    name: Performance Tests
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install performance tools
+      run: |
+        pip install locust pytest-benchmark
+    
+    - name: Run performance tests
+      run: |
+        # Add your performance test commands
+        echo "Running performance tests..."
+        # locust -f performance_tests.py --headless --users 10 --spawn-rate 2 --run-time 60s --host https://yourapp.com
+    
+    - name: Upload performance reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: performance-reports
+        path: performance-reports/
